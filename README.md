@@ -1,0 +1,1 @@
+This is a small project made for showing my core skills as an iOS Developer, all data in this app will be dummy data downloaded from placeholder APIs so please do not mind what it says. I hope you'll have pleasant experiance looking at the code and app itself. :)
