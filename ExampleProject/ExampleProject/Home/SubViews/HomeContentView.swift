@@ -25,7 +25,7 @@ struct HomeContentView: View {
             
             Spacer()
             
-            NavigationLink("Proceed", destination: Text("New View"))
+            NavigationLink("Proceed", destination: MenuView())
                 .font(.subheadline)
                 .buttonStyle(.borderedProminent)
         }

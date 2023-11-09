@@ -15,6 +15,8 @@
 		02A42B0A2AFA9364005C9F64 /* ExampleProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A42B092AFA9364005C9F64 /* ExampleProjectUITests.swift */; };
 		02A42B0C2AFA9364005C9F64 /* ExampleProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A42B0B2AFA9364005C9F64 /* ExampleProjectUITestsLaunchTests.swift */; };
 		02A42B1B2AFA9551005C9F64 /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A42B1A2AFA9551005C9F64 /* HomeContentView.swift */; };
+		02A42B1E2AFD017A005C9F64 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A42B1D2AFD017A005C9F64 /* MenuView.swift */; };
+		02A42B202AFD0FB5005C9F64 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A42B1F2AFD0FB5005C9F64 /* MenuViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		02A42B092AFA9364005C9F64 /* ExampleProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleProjectUITests.swift; sourceTree = "<group>"; };
 		02A42B0B2AFA9364005C9F64 /* ExampleProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		02A42B1A2AFA9551005C9F64 /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
+		02A42B1D2AFD017A005C9F64 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		02A42B1F2AFD0FB5005C9F64 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 		02A42AED2AFA9363005C9F64 /* ExampleProject */ = {
 			isa = PBXGroup;
 			children = (
+				02A42B1C2AFD0165005C9F64 /* Menu */,
 				02A42AEE2AFA9363005C9F64 /* ExampleProjectApp.swift */,
 				02A42B182AFA9516005C9F64 /* Home */,
 				02A42AF22AFA9364005C9F64 /* Assets.xcassets */,
@@ -144,6 +149,15 @@
 				02A42B1A2AFA9551005C9F64 /* HomeContentView.swift */,
 			);
 			path = SubViews;
+			sourceTree = "<group>";
+		};
+		02A42B1C2AFD0165005C9F64 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				02A42B1D2AFD017A005C9F64 /* MenuView.swift */,
+				02A42B1F2AFD0FB5005C9F64 /* MenuViewModel.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,7 +291,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				02A42B1B2AFA9551005C9F64 /* HomeContentView.swift in Sources */,
+				02A42B1E2AFD017A005C9F64 /* MenuView.swift in Sources */,
 				02A42AF12AFA9363005C9F64 /* HomeView.swift in Sources */,
+				02A42B202AFD0FB5005C9F64 /* MenuViewModel.swift in Sources */,
 				02A42AEF2AFA9363005C9F64 /* ExampleProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
