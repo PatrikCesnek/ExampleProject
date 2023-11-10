@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020B47262AFE662600003AFB /* PlaceholderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B47252AFE662600003AFB /* PlaceholderRepository.swift */; };
+		020B472A2AFE681300003AFB /* ReadPostsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B47292AFE681300003AFB /* ReadPostsUseCase.swift */; };
 		02A42AEF2AFA9363005C9F64 /* ExampleProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A42AEE2AFA9363005C9F64 /* ExampleProjectApp.swift */; };
 		02A42AF12AFA9363005C9F64 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A42AF02AFA9363005C9F64 /* HomeView.swift */; };
 		02A42AF32AFA9364005C9F64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02A42AF22AFA9364005C9F64 /* Assets.xcassets */; };
@@ -17,6 +19,7 @@
 		02A42B1B2AFA9551005C9F64 /* HomeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A42B1A2AFA9551005C9F64 /* HomeContentView.swift */; };
 		02A42B1E2AFD017A005C9F64 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A42B1D2AFD017A005C9F64 /* MenuView.swift */; };
 		02A42B202AFD0FB5005C9F64 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A42B1F2AFD0FB5005C9F64 /* MenuViewModel.swift */; };
+		02A42B222AFD4311005C9F64 /* PlaceholderAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A42B212AFD4311005C9F64 /* PlaceholderAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		020B47252AFE662600003AFB /* PlaceholderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderRepository.swift; sourceTree = "<group>"; };
+		020B47292AFE681300003AFB /* ReadPostsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadPostsUseCase.swift; sourceTree = "<group>"; };
 		02A42AEB2AFA9363005C9F64 /* ExampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02A42AEE2AFA9363005C9F64 /* ExampleProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleProjectApp.swift; sourceTree = "<group>"; };
 		02A42AF02AFA9363005C9F64 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -50,6 +55,7 @@
 		02A42B1A2AFA9551005C9F64 /* HomeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContentView.swift; sourceTree = "<group>"; };
 		02A42B1D2AFD017A005C9F64 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		02A42B1F2AFD0FB5005C9F64 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		02A42B212AFD4311005C9F64 /* PlaceholderAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		020B47272AFE67F100003AFB /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				020B47292AFE681300003AFB /* ReadPostsUseCase.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 		02A42AE22AFA9363005C9F64 = {
 			isa = PBXGroup;
 			children = (
@@ -100,11 +114,14 @@
 		02A42AED2AFA9363005C9F64 /* ExampleProject */ = {
 			isa = PBXGroup;
 			children = (
+				020B47272AFE67F100003AFB /* UseCases */,
 				02A42B1C2AFD0165005C9F64 /* Menu */,
 				02A42AEE2AFA9363005C9F64 /* ExampleProjectApp.swift */,
 				02A42B182AFA9516005C9F64 /* Home */,
 				02A42AF22AFA9364005C9F64 /* Assets.xcassets */,
 				02A42AF42AFA9364005C9F64 /* Preview Content */,
+				02A42B212AFD4311005C9F64 /* PlaceholderAPI.swift */,
+				020B47252AFE662600003AFB /* PlaceholderRepository.swift */,
 			);
 			path = ExampleProject;
 			sourceTree = "<group>";
@@ -293,8 +310,11 @@
 				02A42B1B2AFA9551005C9F64 /* HomeContentView.swift in Sources */,
 				02A42B1E2AFD017A005C9F64 /* MenuView.swift in Sources */,
 				02A42AF12AFA9363005C9F64 /* HomeView.swift in Sources */,
+				020B47262AFE662600003AFB /* PlaceholderRepository.swift in Sources */,
 				02A42B202AFD0FB5005C9F64 /* MenuViewModel.swift in Sources */,
+				02A42B222AFD4311005C9F64 /* PlaceholderAPI.swift in Sources */,
 				02A42AEF2AFA9363005C9F64 /* ExampleProjectApp.swift in Sources */,
+				020B472A2AFE681300003AFB /* ReadPostsUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

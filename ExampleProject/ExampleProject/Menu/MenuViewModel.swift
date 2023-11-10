@@ -9,6 +9,4 @@ import SwiftUI
 
 class MenuViewModel: ObservableObject {
     @Published var types: [String] = ["Posts", "Comments", "Albums", "Photos", "Todos", "Users"]
-    
-    
 }
