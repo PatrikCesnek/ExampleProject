@@ -13,7 +13,7 @@ struct MenuView: View {
     var body: some View {
         List(0 ..< viewModel.types.count) { index in
             NavigationLink(
-                destination: { Text(viewModel.types[index]) },
+                destination: { PostsView(viewModel: PostsViewModel()) },
                 label: { Text("\(viewModel.types[index])") }
             )
         }

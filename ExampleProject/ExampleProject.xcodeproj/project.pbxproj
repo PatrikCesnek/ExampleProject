@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		020B47262AFE662600003AFB /* PlaceholderRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B47252AFE662600003AFB /* PlaceholderRepository.swift */; };
 		020B472A2AFE681300003AFB /* ReadPostsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B47292AFE681300003AFB /* ReadPostsUseCase.swift */; };
+		020B472D2AFFBC6F00003AFB /* PostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B472C2AFFBC6F00003AFB /* PostsView.swift */; };
+		020B472F2AFFBC8700003AFB /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B472E2AFFBC8700003AFB /* PostsViewModel.swift */; };
+		020B47322AFFBF3F00003AFB /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B47312AFFBF3F00003AFB /* Posts.swift */; };
 		02A42AEF2AFA9363005C9F64 /* ExampleProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A42AEE2AFA9363005C9F64 /* ExampleProjectApp.swift */; };
 		02A42AF12AFA9363005C9F64 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A42AF02AFA9363005C9F64 /* HomeView.swift */; };
 		02A42AF32AFA9364005C9F64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02A42AF22AFA9364005C9F64 /* Assets.xcassets */; };
@@ -42,6 +45,9 @@
 /* Begin PBXFileReference section */
 		020B47252AFE662600003AFB /* PlaceholderRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderRepository.swift; sourceTree = "<group>"; };
 		020B47292AFE681300003AFB /* ReadPostsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadPostsUseCase.swift; sourceTree = "<group>"; };
+		020B472C2AFFBC6F00003AFB /* PostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsView.swift; sourceTree = "<group>"; };
+		020B472E2AFFBC8700003AFB /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
+		020B47312AFFBF3F00003AFB /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
 		02A42AEB2AFA9363005C9F64 /* ExampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02A42AEE2AFA9363005C9F64 /* ExampleProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleProjectApp.swift; sourceTree = "<group>"; };
 		02A42AF02AFA9363005C9F64 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -91,6 +97,23 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
+		020B472B2AFFBC5A00003AFB /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				020B472C2AFFBC6F00003AFB /* PostsView.swift */,
+				020B472E2AFFBC8700003AFB /* PostsViewModel.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		020B47302AFFBF2E00003AFB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				020B47312AFFBF3F00003AFB /* Posts.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		02A42AE22AFA9363005C9F64 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +137,8 @@
 		02A42AED2AFA9363005C9F64 /* ExampleProject */ = {
 			isa = PBXGroup;
 			children = (
+				020B47302AFFBF2E00003AFB /* Model */,
+				020B472B2AFFBC5A00003AFB /* Posts */,
 				020B47272AFE67F100003AFB /* UseCases */,
 				02A42B1C2AFD0165005C9F64 /* Menu */,
 				02A42AEE2AFA9363005C9F64 /* ExampleProjectApp.swift */,
@@ -313,8 +338,11 @@
 				020B47262AFE662600003AFB /* PlaceholderRepository.swift in Sources */,
 				02A42B202AFD0FB5005C9F64 /* MenuViewModel.swift in Sources */,
 				02A42B222AFD4311005C9F64 /* PlaceholderAPI.swift in Sources */,
+				020B47322AFFBF3F00003AFB /* Posts.swift in Sources */,
+				020B472F2AFFBC8700003AFB /* PostsViewModel.swift in Sources */,
 				02A42AEF2AFA9363005C9F64 /* ExampleProjectApp.swift in Sources */,
 				020B472A2AFE681300003AFB /* ReadPostsUseCase.swift in Sources */,
+				020B472D2AFFBC6F00003AFB /* PostsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
