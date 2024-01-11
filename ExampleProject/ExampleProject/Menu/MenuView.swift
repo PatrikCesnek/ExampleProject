@@ -13,7 +13,13 @@ struct MenuView: View {
     var body: some View {
         List(0 ..< viewModel.types.count) { index in
             NavigationLink(
-                destination: { PostsView(viewModel: PostsViewModel()) },
+                destination: { 
+                    if viewModel.types[index] == "Posts" {
+                        PostsView(viewModel: PostsViewModel())
+                    } else {
+                        Text("Creation of \(viewModel.types[index]) is currently in progress")
+                    }
+                },
                 label: { Text("\(viewModel.types[index])") }
             )
         }
