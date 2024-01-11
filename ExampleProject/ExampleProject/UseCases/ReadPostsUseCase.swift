@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol ReadPostsUseCase {
-    func execute(id: Int?, completion: @escaping (Result<[Post], Error>) -> Void) async throws
+    func execute(id: Int?, completion: @escaping (Result<[Post], Error>) -> Void)
 }
 
 public struct ReadPostsUseCaseImpl: ReadPostsUseCase {
@@ -18,7 +18,7 @@ public struct ReadPostsUseCaseImpl: ReadPostsUseCase {
         self.placeholderRepository = placeholderRepository
     }
     
-    public func execute(id: Int?, completion: @escaping (Result<[Post], Error>) -> Void) async throws {
-        try await placeholderRepository.read(id: id, completion: completion)
+    public func execute(id: Int?, completion: @escaping (Result<[Post], Error>) -> Void) {
+        placeholderRepository.read(id: id, completion: completion)
     }
 }

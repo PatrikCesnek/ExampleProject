@@ -11,33 +11,28 @@ import SwiftUI
 
 class PostsViewModel: ObservableObject {
     @Published var posts: [Post] = [Post]()
+    @Published var isLoading = true
     
     func getPosts(id: Int?) {
-        Task {
-            do {
-                let postArray = try await ReadPostsUseCaseImpl(placeholderRepository: PlaceholderRepositoryImpl()).execute(id: nil) { result in
-                    switch result {
-                    case .success(let items):
-                        self.handleFetchedData(items)
-                    case .failure:
-                        print("Could not get the data")
-                    }
-                }
-                print(postArray)
-            } catch {
-                print("There was some error")
+        let postArray = try ReadPostsUseCaseImpl(placeholderRepository: PlaceholderRepositoryImpl()).execute(id: nil) { result in
+            switch result {
+            case .success(let items):
+                self.handleFetchedData(items)
+            case .failure:
+                print("Could not get the data")
             }
         }
+        print(postArray)
     }
     
     private func handleFetchedData(_ posts: [Post]) {
         var tempPosts = [Post]()
-        DispatchQueue.global().async {
+        DispatchQueue.main.async {
             for item in posts {
                 tempPosts.append(item)
             }
+            self.posts = tempPosts
+            self.isLoading = false
         }
-        
-        self.posts = tempPosts
     }
 }
