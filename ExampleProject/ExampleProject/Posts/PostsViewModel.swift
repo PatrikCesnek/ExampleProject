@@ -6,7 +6,6 @@
 //
 
 import Foundation
-
 import SwiftUI
 
 class PostsViewModel: ObservableObject {
@@ -22,7 +21,6 @@ class PostsViewModel: ObservableObject {
                 print("Could not get the data")
             }
         }
-        print(postArray)
     }
     
     private func handleFetchedData(_ posts: [Post]) {

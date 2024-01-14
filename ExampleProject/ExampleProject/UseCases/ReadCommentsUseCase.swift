@@ -1,17 +1,17 @@
 //
-//  ReadPostsUseCase.swift
+//  ReadCommentsUseCase.swift
 //  ExampleProject
 //
-//  Created by Patrik Cesnek on 10/11/2023.
+//  Created by Patrik Cesnek on 14/01/2024.
 //
 
 import Foundation
 
-public protocol ReadPostsUseCase {
+public protocol ReadCommentsUseCase {
     func execute(id: Int?, completion: @escaping (Result<[Post], Error>) -> Void)
 }
 
-public struct ReadPostsUseCaseImpl: ReadPostsUseCase {
+public struct ReadCommentsUseCaseImpl: ReadCommentsUseCase {
     let placeholderRepository: PlaceholderRepositoryImpl
     
     init(placeholderRepository: PlaceholderRepositoryImpl) {

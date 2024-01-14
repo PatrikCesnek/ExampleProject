@@ -15,12 +15,16 @@ enum PlaceholderAPI {
 }
 
 extension PlaceholderAPI {
-    public var baseURL: URL {
-        URL(string: "https://jsonplaceholder.typicode.com/")!
+    public var baseURLString: String {
+        "https://jsonplaceholder.typicode.com/"
     }
     
     public var postsPath: String {
-        "posts/"
+        "posts"
+    }
+    
+    public var commentsPath: String {
+        "comments/"
     }
     
 }

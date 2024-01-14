@@ -9,18 +9,37 @@ import SwiftUI
 
 struct MenuView: View {
     @ObservedObject var viewModel = MenuViewModel()
-
+    
     var body: some View {
-        List(0 ..< viewModel.types.count) { index in
+        List {
             NavigationLink(
-                destination: { 
-                    if viewModel.types[index] == "Posts" {
-                        PostsView(viewModel: PostsViewModel())
-                    } else {
-                        Text("Creation of \(viewModel.types[index]) is currently in progress")
-                    }
-                },
-                label: { Text("\(viewModel.types[index])") }
+                destination: { PostsView(viewModel: PostsViewModel()) },
+                label: { Text("Posts")}
+            )
+            
+//            NavigationLink(
+//                destination: { CommentsView(viewModel: CommentsViewModel()) },
+//                label: { Text("Comments")}
+//            )
+
+            NavigationLink(
+                destination: { PostsView(viewModel: PostsViewModel()) },
+                label: { Text("Albums")}
+            )
+            
+            NavigationLink(
+                destination: { PostsView(viewModel: PostsViewModel()) },
+                label: { Text("Photos")}
+            )
+            
+            NavigationLink(
+                destination: { PostsView(viewModel: PostsViewModel()) },
+                label: { Text("Todos")}
+            )
+
+            NavigationLink(
+                destination: { PostsView(viewModel: PostsViewModel()) },
+                label: { Text("Users")}
             )
         }
         .navigationTitle(Text("Menu"))
