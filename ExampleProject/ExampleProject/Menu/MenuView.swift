@@ -17,10 +17,10 @@ struct MenuView: View {
                 label: { Text("Posts")}
             )
             
-//            NavigationLink(
-//                destination: { CommentsView(viewModel: CommentsViewModel()) },
-//                label: { Text("Comments")}
-//            )
+            NavigationLink(
+                destination: { CommentsView(viewModel: CommentsViewModel()) },
+                label: { Text("Comments")}
+            )
 
             NavigationLink(
                 destination: { PostsView(viewModel: PostsViewModel()) },

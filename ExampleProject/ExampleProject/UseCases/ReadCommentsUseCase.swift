@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol ReadCommentsUseCase {
-    func execute(id: Int?, completion: @escaping (Result<[Post], Error>) -> Void)
+    func execute(id: Int?, completion: @escaping (Result<[Comment], Error>) -> Void)
 }
 
 public struct ReadCommentsUseCaseImpl: ReadCommentsUseCase {
@@ -18,7 +18,7 @@ public struct ReadCommentsUseCaseImpl: ReadCommentsUseCase {
         self.placeholderRepository = placeholderRepository
     }
     
-    public func execute(id: Int?, completion: @escaping (Result<[Post], Error>) -> Void) {
-        placeholderRepository.readPosts(id: id, completion: completion)
+    public func execute(id: Int?, completion: @escaping (Result<[Comment], Error>) -> Void) {
+        placeholderRepository.readComments(id: id, completion: completion)
     }
 }

@@ -12,6 +12,7 @@
 		020B472D2AFFBC6F00003AFB /* PostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B472C2AFFBC6F00003AFB /* PostsView.swift */; };
 		020B472F2AFFBC8700003AFB /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B472E2AFFBC8700003AFB /* PostsViewModel.swift */; };
 		020B47322AFFBF3F00003AFB /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020B47312AFFBF3F00003AFB /* Posts.swift */; };
+		021EE7652B554A0D00BD13BF /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021EE7642B554A0D00BD13BF /* CommentView.swift */; };
 		02A42AEF2AFA9363005C9F64 /* ExampleProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A42AEE2AFA9363005C9F64 /* ExampleProjectApp.swift */; };
 		02A42AF12AFA9363005C9F64 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A42AF02AFA9363005C9F64 /* HomeView.swift */; };
 		02A42AF32AFA9364005C9F64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02A42AF22AFA9364005C9F64 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		020B472C2AFFBC6F00003AFB /* PostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsView.swift; sourceTree = "<group>"; };
 		020B472E2AFFBC8700003AFB /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 		020B47312AFFBF3F00003AFB /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		021EE7642B554A0D00BD13BF /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		02A42AEB2AFA9363005C9F64 /* ExampleProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02A42AEE2AFA9363005C9F64 /* ExampleProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleProjectApp.swift; sourceTree = "<group>"; };
 		02A42AF02AFA9363005C9F64 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -127,6 +129,14 @@
 				02F5DB9D2B54056C00819155 /* Comments.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		021EE7632B5549FA00BD13BF /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				021EE7642B554A0D00BD13BF /* CommentView.swift */,
+			);
+			path = SubViews;
 			sourceTree = "<group>";
 		};
 		02A42AE22AFA9363005C9F64 = {
@@ -238,6 +248,7 @@
 		02F5DB962B5402AE00819155 /* Comments */ = {
 			isa = PBXGroup;
 			children = (
+				021EE7632B5549FA00BD13BF /* SubViews */,
 				02F5DB992B5404BC00819155 /* CommentsView.swift */,
 				02F5DB9B2B5404E300819155 /* CommentsViewModel.swift */,
 			);
@@ -390,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				021EE7652B554A0D00BD13BF /* CommentView.swift in Sources */,
 				02F5DB9C2B5404E300819155 /* CommentsViewModel.swift in Sources */,
 				02A42B1B2AFA9551005C9F64 /* HomeContentView.swift in Sources */,
 				02A42B1E2AFD017A005C9F64 /* MenuView.swift in Sources */,

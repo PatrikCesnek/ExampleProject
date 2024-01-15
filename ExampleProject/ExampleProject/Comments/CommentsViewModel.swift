@@ -13,16 +13,15 @@ class CommentsViewModel: ObservableObject {
     @Published var isLoading = true
     
     func getComments(id: Int?) {
-        let postArray = try ReadPostsUseCaseImpl(placeholderRepository: PlaceholderRepositoryImpl()).execute(id: nil) { result in
+        let commentArray = ReadCommentsUseCaseImpl(placeholderRepository: PlaceholderRepositoryImpl()).execute(id: nil) { result in
             switch result {
             case .success(let items):
-//                self.handleFetchedData(items)
-                print("Sucess")
+                self.handleFetchedData(items)
             case .failure:
                 print("Could not get the data")
             }
         }
-        print(postArray)
+        print(commentArray)
     }
     
     private func handleFetchedData(_ comments: [Comment]) {
