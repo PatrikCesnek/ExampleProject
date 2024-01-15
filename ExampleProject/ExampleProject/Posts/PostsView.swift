@@ -14,7 +14,7 @@ struct PostsView: View {
         VStack {
             if !viewModel.isLoading {
                 ScrollView {
-                    VStack(alignment: .leading, spacing: 12) {
+                    LazyVStack(alignment: .leading, spacing: 12) {
                         ForEach(viewModel.posts, id: \.id) { item in
                             NavigationLink {
                                 PostView(post: item)

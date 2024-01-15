@@ -14,7 +14,7 @@ struct CommentsView: View {
         VStack {
             if !viewModel.isLoading {
                 ScrollView {
-                    VStack(alignment: .leading, spacing: 12) {
+                    LazyVStack(alignment: .leading, spacing: 12) {
                         ForEach(viewModel.comments, id: \.id) { item in
                             NavigationLink {
                                 CommentView(comment: item)
