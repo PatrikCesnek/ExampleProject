@@ -11,14 +11,18 @@ import SwiftUI
 class PostsViewModel: ObservableObject {
     @Published var posts: [Post] = [Post]()
     @Published var isLoading = true
+    var err: Error? = nil
     
-    func getPosts(id: Int?) {
+    func getPosts(id: Int?, completion: @escaping ([Post]?, Error?) -> Void) {
         let postArray = try ReadPostsUseCaseImpl(placeholderRepository: PlaceholderRepositoryImpl()).execute(id: nil) { result in
             switch result {
             case .success(let items):
                 self.handleFetchedData(items)
-            case .failure:
-                print("Could not get the data")
+                completion(items, nil)
+            case .failure(let error):
+                self.err = error
+                print("Could not get the data: \(error)")
+                completion(nil, error)
             }
         }
     }

@@ -11,17 +11,20 @@ import SwiftUI
 class CommentsViewModel: ObservableObject {
     @Published var comments: [Comment] = [Comment]()
     @Published var isLoading = true
+    var err: Error? = nil
     
-    func getComments(id: Int?) {
-        let commentArray = ReadCommentsUseCaseImpl(placeholderRepository: PlaceholderRepositoryImpl()).execute(id: nil) { result in
+    func getComments(id: Int?, completion: @escaping ([Comment]?, Error?) -> Void) {
+        ReadCommentsUseCaseImpl(placeholderRepository: PlaceholderRepositoryImpl()).execute(id: id) { result in
             switch result {
             case .success(let items):
                 self.handleFetchedData(items)
-            case .failure:
-                print("Could not get the data")
+                completion(items, nil)
+            case .failure(let error):
+                self.err = error
+                print("Could not get the data: \(error)")
+                completion(nil, error)
             }
         }
-        print(commentArray)
     }
     
     private func handleFetchedData(_ comments: [Comment]) {

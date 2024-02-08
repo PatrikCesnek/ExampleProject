@@ -27,12 +27,19 @@ struct PostsView: View {
                     }
                     .padding()
                 }
-            } else {
+            } else if viewModel.err == nil {
                 LoadingView()
+            } else {
+                ErrorView(
+                    error: viewModel.err,
+                    tryAgain: {
+                        print("Error with posts")
+                    }
+                )
             }
         }
         .onAppear {
-            viewModel.getPosts(id: nil)
+            viewModel.getPosts(id: nil, completion: {_,_ in})
         }
     }
 }

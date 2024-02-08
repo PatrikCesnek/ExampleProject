@@ -27,12 +27,19 @@ struct CommentsView: View {
                     }
                     .padding()
                 }
-            } else {
+            } else if viewModel.err == nil {
                 LoadingView()
+            } else {
+                ErrorView(
+                    error: viewModel.err,
+                    tryAgain: {
+                        print("Try again")
+                    }
+                )
             }
         }
         .onAppear {
-            viewModel.getComments(id: nil)
+            viewModel.getComments(id: nil, completion: {_,_ in })
         }
     }
 }
